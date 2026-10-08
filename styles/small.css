@@ -3,7 +3,7 @@
 /******************************** COLOR SCHEME ********************************/
 :root {
     --color-primary: #173B63;
-    --color-secondary: #B8323C;;
+    --color-secondary: #B8323C;
 
     /*Series of Grey Scale Colors*/
     --color-mygrey-05: lab(98% 0 0);
@@ -200,7 +200,7 @@ h1 {
 /* Creates a responsive grid for all of the president cards */
 .allpresidents {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, 300px);
     gap: 10px;
     margin: 10px;
 }
@@ -222,11 +222,42 @@ h1 {
     color: white;
 }
 
-/* Makes each president image fill the card width */
+/* Color used for presidents with no political party */
+.none h2 {
+    background-color: var(--color-mygrey-70);
+}
+
+/* Color used for Federalist presidents */
+.federalist h2 {
+    background-color: var(--color-primary);
+}
+
+/* Color used for Republican presidents */
+.republican h2 {
+    background-color: #9E2A2B;
+}
+
+/* Color used for Democratic presidents */
+.democratic h2 {
+    background-color: #2E5EAA;
+}
+
+/* Color used for Democratic-Republican presidents */
+.democratic-republican h2 {
+    background-color: #a33b0e;
+}
+
+/* Color used for Whig presidents */
+.whig h2 {
+    background-color: #8A6D3B;
+}
+
+/* Makes each president image fit inside the card */
 .allpresidents img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
 }
 
 /* Styles the information below each president image */
